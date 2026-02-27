@@ -106,7 +106,7 @@ export default function ScannerScreen({ navigation }) {
 
         {state.items.length === 0 ? (
           <View style={styles.emptyCart}>
-            <IconButton icon="barcode-scan" size={40} alpha={0.5} />
+            <IconButton icon="barcode-scan" size={40} />
             <Text variant="bodyMedium" style={{ color: '#888' }}>Escanea productos para empezar</Text>
           </View>
         ) : (
@@ -166,7 +166,7 @@ export default function ScannerScreen({ navigation }) {
         duration={1000}
         style={styles.snackbar}
       >
-        Añadido: {lastScanned.slice(-8)}
+        <Text style={{ color: '#fff' }}>Añadido: {lastScanned.slice(-8)}</Text>
       </Snackbar>
     </View>
   );
